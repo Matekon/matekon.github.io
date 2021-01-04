@@ -7,7 +7,7 @@
 
 <p><h1>Matekon's home</h1></p>
 
-<img src="C:\Users\vinqu\Pictures\kkknkn.jpg" height="400">
+<img src="20180817_203058.jpg" height="400">
 
 <p>Hi, I am Vincent Laberge, aka <i> Matekon </i>, a student in mathematics and an amateur composer from Montréal.</p>
 
