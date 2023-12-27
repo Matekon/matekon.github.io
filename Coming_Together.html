@@ -1,0 +1,286 @@
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Coming Together</title>
+        <style>
+            .content {
+                font-size: 20px;
+                margin-right: 20%;
+                margin-left: 20%;
+            }
+
+            header, footer {
+                background-image: url(static/Images/tumblr_ox0oyniHXD1u3n44mo1_1280.jpg);
+                font-size: 100px;
+                text-align: center;
+                color: white;
+                padding:100px;
+            }
+        </style>
+       <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+       <script id="MathJax-script" async
+               src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+       </script>
+    </head>
+    <header>Matekon</header>
+    <body>
+
+    <div class="content">
+
+        <h1> A mathematical analysis of Frederic Rzewski's <i>Coming Together</i> </h1>
+
+        This is the starting point of the piece, or the "seed". Its consists of 7 notes ascending the G minor pentatonic scale. <br><br>
+        <img src="static/Images/Seed.png"><br>
+        <audio controls>
+            <source src="static/Audio/Seed.mp3" type="audio/mp3">
+        </audio><br><br>
+
+        From this, let's create the pattern A, by first taking the first note of the seed, then the first 2 notes, then the first 3 notes etc. until we get all 7 notes.<br><br>
+
+        <img src="static/Images/Pattern A.png" width="100%"><br>
+        <audio controls>
+            <source src="static/Audio/Pattern A.mp3" type="audio/mp3">
+        </audio><br><br>
+
+        Let's notice the process we've just done could have being done differently. <br><br>
+        Instead of starting with one note and then adding notes, we've could have started with the whole pattern add then substract notes. <br><br>
+        We've could also have started with the last note of the seed as the first note of the pattern, and then add notes left of it.<br><br>
+        Finally, we could have chosen to play the seed from right to left instead of left to right.<br><br>
+
+        Because we have 3 different choices between 2 options, we can create \(2^3=8\) different patterns.<br><br>
+        So, for the pattern A, we chose to: 
+        <pre>
+Pattern A:
+1) Start with one note and then add notes
+2) Start with the note at the extreme left and then add notes left of it.
+3) Play the seed from left to right. 
+        </pre>
+
+        Let's now create all 8 possible patterns.
+        <pre>
+Pattern B:
+1) Start with the whole seed and then substract notes
+2) Substract notes from the right.
+3) Play the seed from left to right. 
+        </pre>
+
+
+        <img src="static/Images/Pattern B.png" width="100%"><br>
+        <audio controls>
+            <source src="static/Audio/Pattern B.mp3" type="audio/mp3">
+        </audio><br><br>
+
+<pre>
+Pattern C:
+1) Start with one note and then add notes
+2) Start with the note at the extreme left and then add notes left of it.
+3) Play the seed from right to left.
+ </pre>
+
+        <img src="static/Images/Pattern C.png" width="100%"><br>
+        <audio controls>
+            <source src="static/Audio/Pattern C.mp3" type="audio/mp3">
+        </audio><br><br>
+
+<pre>
+Pattern D:
+1) Start with the whole seed and then substract notes
+2) Substract notes from the left.
+3) Play the seed from right to left.
+</pre>
+
+        <img src="static/Images/Pattern D.png" width="100%"><br>
+        <audio controls>
+            <source src="static/Audio/Pattern D.mp3" type="audio/mp3">
+        </audio><br><br>
+<pre>
+Pattern E:
+1) Start with one note and then add notes
+2) Start with the note at the extreme right and then add notes left of it.
+3) Play the seed from left to right.
+</pre>
+
+        <img src="static/Images/Pattern E.png" width="100%"><br>
+        <audio controls>
+            <source src="static/Audio/Pattern E.mp3" type="audio/mp3">
+        </audio><br><br>
+<pre>
+Pattern F:
+1) Start with the whole seed and then substract notes
+2) Substract notes from the left.
+3) Play the seed from left to right.
+</pre>
+
+        <img src="static/Images/Pattern F.png" width="100%"><br>
+        <audio controls>
+            <source src="static/Audio/Pattern F.mp3" type="audio/mp3">
+        </audio><br><br>
+
+<pre>
+Pattern G:
+1) Start with one note and then add notes
+2) Start with the note at the extreme right and the add notes left of it.
+3) Play the seed from right to left.
+</pre>
+
+        <img src="static/Images/Pattern G.png" width="100%"><br>
+        <audio controls>
+            <source src="static/Audio/Pattern G.mp3" type="audio/mp3">
+        </audio><br><br>
+<pre>
+Pattern H:
+1) Start with the whole seed and then substract notes
+2) Substract notes from the right.
+3) Play the seed from right to left.
+</pre>
+
+        <img src="static/Images/Pattern H.png" width="100%"><br>
+        <audio controls>
+            <source src="static/Audio/Pattern H.mp3" type="audio/mp3">
+        </audio><br><br>
+
+        We can calculate the number of notes in each pattern with Gauss's formula:
+        \(1+2+3+4+5+6+7= \sum_{i=1}^{7}i=7*8/2=28\)<br><br>
+        We notice that Gauss's formula implies that the sum of numbers from 1 to 7, i.e. 28,
+        has to be a multiple of 7. This will come useful later. <br> <br>
+
+        Now, all of this will become pretty meta. We will reiterate the same process on the 8 patterns to create the 8 sections of the piece. <br><br>
+
+        Let's take the pattern A. We first take the first note of the pattern, then the 2 first notes, then the 3 first notes etc. until we get all 28 notes of the pattern. 
+        Doing so, we get the following result (this is just the beginning):<br><br>
+
+        <img src="static/Images/Section A.png" width="100%"><br>
+        <audio controls>
+            <source src="static/Audio/Section A.mp3" type="audio/mp3">
+        </audio><br><br>
+       
+        Once the pattern is full, we then substract notes form it, starting from the left. Once there is no notes left, the section is over. <br> <br>
+
+        So each section will have  \(1+2+3+4+...+27+28+27+...+3+2+1 = \sum_{i=1}^{28}i+\sum_{i=1}^{27}i\)
+        \(= 28*29/2+27*28/2= 406+378=784 \) notes. <br><br>
+
+    We notice that \(784=28^2\). This is a specific case of the general assumption that \(\sum_{i=1}^{n}i+\sum_{i=1}^{n-1}i=n^2\)<br>
+    Indead, \(\sum_{i=1}^{n}i+\sum_{i=1}^{n-1}i=n(n+1)/2+(n-1)n/2= n/2((n+1)+(n-1)) = n/2*2n = n^2\) <br><br>
+
+        Because \(784 = 28^2 = 4^2*7^2 = 16*49\), we can divide each section into 49 measures of 16 notes each. Because \(49=7^2\), we can 
+        separate these 49 measures into 7 groups of 7 measures. <br> <br>
+
+        So, the piece has 8 sections of 49 measures each, so \(8*49 = 392\) measures, and \(8*7=56\) groups of 7 measures.<br> <br>
+
+        Let's now add lyrics to the piece. They will be separated into 8 groups of 7 lines each. The vocalist must say one line for each 
+        measure. 
+
+        <pre>
+
+Group A: I THINK
+THE COMBINATION
+OF AGE
+AND A  GREATER COMING TOGETHER
+IS RESPONSIBLE
+FOR THE SPEED
+OF THE PASSING TIME
+________
+Group B: IT’S SIX MONTH NOW
+AND I CAN TELL YOU
+TRUTHFULLY
+FEW PERIODS
+IN MY LIFE
+HAVE PASSED
+SO QUICKLY
+_______
+Group C: I
+AM
+IN
+EXCELLENT
+PHYSICAL
+AND EMOTIONAL
+HEALTH
+________
+Group D: THERE DOUBTLESS
+SUBTLE
+SURPRISES
+AHEAD
+BUT I FEEL
+SECURE
+AND READY
+___________
+Group E: AS LOVERS
+WILL CONTRAST
+THEIR EMOTIONS
+IN TIMES
+OF CRISIS,
+SO AM I DEALING
+WITH MY ENVIRONMENT,
+____________
+Group F: IN THE INDIFFERENT BRUTALITY,
+THE INCESSANT NOISE,
+THE EXPERIMENTAL CHEMISTRY OF FOOD,
+THE RAVINGS OF LOST HYSTERICAL MEN,
+I CAN ACT
+WITH CLARITY
+AND MEANING
+_________
+Group G: I AM DELIBERATE
+SOMETIMES EVEN CALCULATING
+SELDOM
+EMPLOYING HISTRIONICS
+EXCEPT AS A TEST
+OF THE REACTIONS
+OF OTHERS.
+________________
+Group H: I READ MUCH,
+EXERCISE,
+TALK TO GUARD AND INMATE,
+FEELING FOR
+THE INEVITABLE
+DIRECTION
+OF MY LIFE
+
+</pre>
+
+            As said previously, the piece has 56 groups in total. Because \(56=2*28\) and \(28=1+2+3+4+5+6+7\), 
+            we can again use incrementation and decrementation as follows:
+
+<pre>
+
+A
+AB
+ABC
+ABCD
+ABCDE
+ABCDEF
+ABCDEFG
+BCDEFGH
+CDEFGH
+DEFGH
+EFGH
+FGH
+GH
+H
+</pre>
+
+Regrouping 7 consecutive groups into one section, we get the following:
+
+<pre>
+
+Section A: AABABCA
+Section B: BCDABCD
+Section C: EABCDEF
+Section D: ABCDEFG
+Section E: BCDEFGH
+Section F: CDEFGHD
+Section G: EFGHEFG
+Section H: HFGHGHH
+</pre>
+
+That's what I call clever!<br><br>
+
+<iframe width="420" height="315"
+src="https://www.youtube.com/watch?v=wczJlxoxITE">
+</iframe>
+
+    </div>
+
+    <footer></footer>
+    </body>
+</html>
