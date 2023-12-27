@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>What does Galois Theory really tell us?</title>
+  <meta charset ="utf-8">
+  
+  <style>
+
+    body
+    {
+        background-color: #fafafa;
+    }
+    .content {
+        background-color: white;
+        font-size: 20px;
+        margin-right: 15%;
+        margin-left: 15%;
+        padding:20px;
+        border-radius: 25px;
+    }
+
+    header, footer {
+        border-radius: 25px;
+        background-image: url(img/banniere.jpg);
+        font-size: 100px;
+        text-align: center;
+        color: white;
+        padding:100px;
+    }
+
+    .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 25px;
+}
+
+a {
+  color:black;
+}
+a:hover{
+  font-weight: bold;
+}
+</style>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async
+       src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
+</head>
+
+<header>Matekon</header>
+<div class="content">
+    
+    <h1>What does Galois Theory really tell us?</h1>
+
+<p>In the article, I judge the mathematics treated won’t be really developed. Its point will be more of a philosophical nature: to make us think about mathematical abstraction the right way and make us ask the right questions. I know doing so, I risk being a Captain Obvious for some...
+</p>
+<p>I use the following personal conventions:
+</p>
+<p>● - Definitions - Propositions I assume are true
+</p>
+<p>○ - Theorems – Propositions I deduce from the definitions
+</p>
+<p>__________________
+</p>
+<p>We all learned at school the formula for solving quadratic equations.
+</p>
+<p> \( ax^2+bx+c=0\) 
+</p>
+<p> \(\Rightarrow x = \frac{-b \pm \sqrt{b^2-4ac}}{2a} \)
+</p>
+<p>Analogous formulas also exist to solve equations of <a href="https://en.wikipedia.org/wiki/Cubic_equation#Cardano's_formula">degree 3</a> and <a href="https://en.wikipedia.org/wiki/Quartic_function#General_formula_for_roots">4</a>, but they are long and painful to use.
+</p>
+<p>For a long time, many mathematicians were searching general formulas for solving equations of degree 5 or more.  But then, in the first half of the 19th century, Évariste Galois proved that these formulas just can’t exist. For this, he used some new mathematics he just invented that will later on be called Galois Theory. 
+</p>
+<p>You might tell yourself how did he proved such a result. The fact is that I will not talk about Galois Theory directly in this article. I mainly want to be point out that the result above really just is the consequence of a more powerful and surprising result from this theory:
+</p>
+<p>\( \circ \) For any \(n \ge 5\), there exists a polynomial of degree \(n\) with zeros that aren’t rooty.
+</p>
+<p>Let’s explain the terms. 
+</p>
+<p>\( \bullet \) Rooty numbers are the numbers we can construct starting with integers and using the operations of addition, subtraction, multiplication, division and taking roots.
+</p>
+<p>So, examples would be \(  \sqrt[3]{2} \) and \(\frac{1+\sqrt{5}}{2}\)
+</p>
+<p>\( \bullet \) Rooty expressions are all the algebraic expression that we can construct starting with integers and variables and using the operations of addition, subtraction, multiplication, division and taking roots.
+</p>
+<p>Examples would be our 3 formulas above for solving equations of degree 2,3 and 4.
+</p>
+<p>Let’s see the theorem again:
+</p>
+<p>\( \circ \) For any \(n \ge 5\), there exists a polynomial of degree \(n\) with zeros that aren’t rooty.  
+</p>
+<p>Concretely, it is proven that \(x^5-x-1\)  has no rooty zeros (and is the “simplest” polynomial with this property). 
+</p>
+<p>This implies that there isn’t a rooty expression for solving equations of degree 5. That’s because, if there were, when applied to the polynomial   \(x^5-x-1\), it would return us a rooty number, which would contradict the result just above. 
+</p>
+<p>With Galois Theory, we can also find a polynomial of degree 6 with no rooty zeros, implying there isn’t a general formula for solving equations of degree 6. This argument will also work for degrees 7,8,9,... and so on. 
+</p>
+<p>That seems shocking as a realization at first, but it really shouldn’t be. I will explain why. 
+</p>
+<p>______________________________
+</p>
+<p><b>Why it shouldn’t be shocking</b>
+</p>
+<p>The fact is that we take operations such as roots as granted, but should we? I would like to point out for instance that you probably haven’t learned a method in school to evaluate it by hand, unlike +,-,* and /. 
+</p>
+<p>When we think about it, how are roots defined? There are 2 cases to consider:
+</p>
+<p>First, let’s suppose \(n\) odd. Using simple tools from Analysis, we can prove that the polynomial \(x^n-a\) must always have one and only one zero in \(\mathbb{R}\). So, we define \(\sqrt[n]{a}\) as the only real zero of \(x^n-a\).
+</p>
+<p>Now, let’s suppose \(n\)   even. If  \(a>0\),  we can prove that the polynomial \(x^n-a\) has exactly 2 zeros on \( \mathbb{R}\), one positive and one negative. So, we can define \(\sqrt[n]{a}\) as the  positive zero of   \(x^n-a\) by simple convention. For the case when \(a=0\), \(x^n-0\) has only \(0\) has a zero, so we define  \(\sqrt[n]{0}=0\). For,  \(a<0\),  \(x^n-a\) has no real zeros, so we will decide to not attribute any value to \(\sqrt[n]{a}\) in this case. 
+</p>
+<p>And that’s pretty much it. I am of the opinion it is more practical to keep the definition of root operations to this and not try to extend it to complex outputs and inputs, mostly because we would lose a lot of nice properties doing so. Consequently, I would not say a thing such as \(i = \sqrt{-1} \) for example.
+</p>
+<p>(Ok, I reread the article and realized that the 3 formulas at the beginning do use roots extended to complex numbers and are even used as multivalued functions. Well, conventions go all around the place. But I am sure it is possible to reformulate these formulas using the definition of roots just above.)  
+</p>
+<p>Let’s note that, yes, theses definitions are quite “indirect” and don’t allow us to immediately evaluate the values of the roots immediately, but that really shouldn’t be a problem. I prioritize definitions to be intuitive and centered around the comprehension of the concepts. Then, for a function, we should just later on develop ways to evaluate it. We can use Taylor Series or Newton’s method to evaluate roots, among other things. 
+</p>
+<p>Roots are “usual’ operations, but that doesn’t make them more “legitimate” than other ones. To illustrate this, let me define a new operation from scratch:
+</p>
+<p>Let’s take \(a \in \mathbb{R}\) and \(n \in \mathbb{N}\), odd. Then, the polynomial \(x^n-x-a\) must absolutely have at least 1 real solution and at most 5 in total. Knowing that, I can define an operation, let’s say \(\lhd_n(a)\) which equals the biggest real solution of the polynomial \(x^n-x-a\). It will always be well-defined. 
+</p>
+<p>Even if it is less frequent as \(\sqrt[n]{}\) (well, I just invented it...), \(  \lhd_n  \) is equally as legitimate, well-defined, computable and all the rest. All I can say against it is that it is probably (definitely!) isn’t as useful of an operation and isn’t as known (obviously...) but that’s about it. 
+</p>
+<p>If we want to express all algebraic numbers, using operations such as \(  \lhd_n   \) would be necessary as roots won’t be enough. 
+</p>
+<p>________________________________
+</p>
+<p><b>Why it should be intuitive</b>
+</p>   
+<p>What Galois found is quite intuitive from where I stand and here’s why:
+</p>
+<p>Rooty numbers are what we can build using the structure of very simple polynomials of the form \(x^n-a\) and some very basic operations like +,-,* and /.
+</p>
+<p>But polynomials can be a lot more complex than \(x^n-a\). So really, expecting every algebraic numbers to be rooty means expecting every polynomial, no matter how complex it is, to have its “internal structure” described by simple polynomials of the form   \(x^n-a\).
+</p>
+<p>It would be like asking to draw every single shape using only straight lines and circle arcs. Sure, we can make at lot with them, but clearly not everything: it’s way too restrictive. 
+</p>
+<p>So, in fact, what’s should be really surprising is that we are able to reduce to \(x^n-a\) the polynomials of degrees 2,3 and 4.
+</p>
+<p>___________________________
+</p>
+<p><b>Some thoughts</b>
+</p>
+<p>You may ask: “Why bother having a rooty formula for solving polynomial equations when I can evaluate the root as precisely as I want using various techniques? What’s the deal with having an exact formula?”.
+</p>
+<p>I don’t think we should see “exact answers” in mathematics as ways to evaluate something. I see it more this way: it is a connection between 2 ideas in math.
+</p>
+<p>For exemple, when Euler proved  \(\sum_{n=1}^{\infty}\frac{1}{n^2} = \frac{\pi^2}{6}\), he didn’t find a way to evalute the sum. Instead, he found a connection between this summation and circles. 
+</p>
+<p>All results in math should better be seeing in this mindframe. 
+</p>
+</div>
+<footer></footer>
+</body>
+</html>
