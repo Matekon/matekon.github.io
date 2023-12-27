@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>What do 0 to the 0 and 0 to the -1 equal? Undefined vs Indeterminate.</title>
+  <meta charset ="utf-8">
+  
+  <style>
+
+    body
+    {
+        background-color: #fafafa;
+    }
+    .content {
+        background-color: white;
+        font-size: 20px;
+        margin-right: 15%;
+        margin-left: 15%;
+        padding:20px;
+        border-radius: 25px;
+    }
+
+    header, footer {
+        border-radius: 25px;
+        background-image: url(img/banniere.jpg);
+        font-size: 100px;
+        text-align: center;
+        color: white;
+        padding:100px;
+    }
+
+    .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 25px;
+}
+
+a {
+  color:black;
+}
+a:hover{
+  font-weight: bold;
+}
+</style>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async
+       src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
+</head>
+
+<header>Matekon</header>
+<div class="content">
+<h1 style="text-align: center;">What do \(0^0\) and \(0^{-1}\) equal? Undefined vs Indeterminate.</h1>
+
+
+<p>I use the following personal conventions:
+</p>
+<p>● - Definitions - Propositions I assume are true
+</p>
+<p>○ - Theorems – Propositions I deduce from the definitions
+</p>
+
+<p>Also, just to be clear:
+</p>
+<p>●  \( \mathbb{N} = \{0,1,2,3,4…\} \)
+</p>
+<p>●  \( \mathbb{N}^{*} = \{1,2,3,4...\} \) 
+</p>
+<p>_____    
+</p>
+<p>It is regularly said that \(0^0\) is indeterminate, just like it is regularly said that \(0\) has no multiplicative inverse \(0^{-1}\) (or, equivalently, that we can’t divide by \(0\)). 
+</p>
+<p>But it is important to point out that these 2 cases are very different in nature: 
+</p>
+<p>\(0^0\) is “indeterminate” and \(0^{-1}\) is “undefined”. 
+</p>
+<p>This means is the following: 
+</p>
+<p>\( \bullet \: \) An expression is indeterminate if it has many possible values.
+</p>
+<p>\( \bullet \: \) An expression is undefined if it has no possible values  
+</p>
+<p>Otherwise,
+</p>
+<p>\( \bullet \: \) An expression is well-defined if it has one and only one possible value
+</p>
+<p>(Note: I haven’t taken these definitions out of God’s math book. They are just personal conventions based on my experience. One of my main criteria to evaluate definitions is simply: “Are they useful?”. I am aware that my definition for “indeterminate” could be debated.)
+</p>
+<p>So, \(0^{-1}\) being undefined means it has no possible values. We must understand this the following way: giving any value to   \(0^{-1}\) will necessarily imply a contradiction. It is easy to prove:
+</p>
+<p>Assuming \(0^{-1}\) has a value, I can use it in algebraic expressions. Because I defined \(0^{-1}\) as the multiplicative inverse of \(0\), we immediately get that ... 
+</p>
+<p>\( 0*0^{-1}=1 \) 
+</p>
+<p>\( \Rightarrow 2*(0* 0^{-1}) =2*1\)
+</p>
+<p>\( \Rightarrow (2*0)* 0^{-1} =2\)
+</p>
+<p>\( \Rightarrow 0*0^{-1} =2\)
+</p>
+<p>So, \(1=2\) which is a contradiction. So   \(0^{-1}\) is undefined. 
+</p>
+<p>In the other case, \(0^0\) is indeterminate because it could either equal \(0\) or \(1\) and both choices would be totally consistent. 
+</p>
+<p>To better understand why this is the case, I really have to start from scratch : I will take the time to define the operation of exponentiation.
+</p>
+<p>First, we all agree that our initial intuitive understanding of exponentiation would be “iterated multiplication”. That’s how we all got introduced to it at school. 
+</p>
+<p>Intuitive definition of exponentiation:
+</p>
+<p>\( \bullet \: a^n = a*a*a*...*a\) (\(n\) times)
+</p>
+<p>Let’s remark:
+</p>
+<p>1) This definition only makes sense for \( n \in \mathbb{N}^{*} \)
+</p>
+<p>2) We see that we can define exponentiation by induction on \(n\).  
+</p>
+<p>3) Exponentiation is a binary operation. What that means is that it is a function with 2 arguments/inputs.
+</p>
+<p>So with that, let’s make a more rigorous definition for our operation.
+</p>
+<p>Inductive definition of exponentiation with exponent in \( \mathbb{N}^{*}\):
+</p>
+<p>\(   \bullet \: exp: \mathbb{C} \times \mathbb{N}^{*}   \rightarrow   \mathbb{C}    \), where \( exp(a,n) = a^n \), is a function so that:
+</p>
+<p>\( (A) \: a^1=a \)
+</p>
+<p>\( (B) \: a^{n+1}=a^n*a \: \)  for \( n \in   \mathbb{N}^{*}   \)
+</p>
+<p>Let’s remark:
+</p>
+<p> 1) Right from the start, we can assume that \(a\) can be a complex number. Indeed, this assumption doesn’t create any “problems” with the definition
+</p>
+<p> 2) This function is surprisingly uniquely and completely defined without ambiguity by the properties  \((A)\) and \((B)\). (How is that?)
+</p>
+<p>What I will do now will seem strange but it’s relevancy will become clear later: I can show that the definition above is logically equivalent to the following:
+</p>
+<p>“Golden” definition of exponentiation with exponent in \( \mathbb{N}^{*}\):  
+</p>
+<p>\( \bullet \: exp:   \mathbb{C} \times \mathbb{N}^{*} \rightarrow  \mathbb{C}  \), where \( exp(a,n) = a^n \), is a function so that:   
+</p>
+<p>\( (A)\:  a^1=a\)
+</p>
+<p>\( (B)\: a^{m+n} = a^m*a^n \)  for \(m,n \in   \mathbb{N}^{*}   \)
+</p>
+<p>I like to think about equation \((B)\) as the “Golden Rule of Exponentiation”: it must ALWAYS be true, regardless of how I want to extend the definition of exponentiation.   
+</p>
+<p>As previous, we can show that there is only ONE function that respects the properties \((A)\) and \((B)\). 
+</p>
+<p>Our initial goal was to determinate the value for \( 0^0 \). The problem is that our definition above only works for an exponent in \(\mathbb{N}^{*}   \), which excludes \(0\).
+</p>
+<p>So, let’s do what mathematicians love to do : EXTEND the definition above to add \(0\) as a possible value for the exponent.
+</p>
+<p>“Golden” definition of exponentiation with exponent in \( \mathbb{N}\):   
+</p>
+<p>\( \bullet \: exp:   \mathbb{C} \times \mathbb{N} \rightarrow  \mathbb{C}    \), where \( exp(a,n) = a^n \), is a function so that:     
+</p>
+<p>\((1)\: a^1=a \)
+</p>
+<p>\( (2)\: a^{m+n} = a^m*a^n \) for \( m,n \in \mathbb{N} \)
+</p>
+<p>So, what are the inescapable consequences of this definition? What would happen if the exponent \(n\) is \(0\)?
+</p>
+<p>Case 1: \( a \ne 0 \) and \(n=0\)
+</p>
+<p>Then, \( a= a^1=a^{1+0}=a^1*a^0 =a*a^0\)
+</p>
+<p>\( \Rightarrow a=  a*a^0\)    
+</p>
+<p>\( \Rightarrow 1= a^0\) (by dividing both sides by \(a\), which doesn’t equal \(0\))
+</p>
+<p>Case 2: \(a=0 \) and \(n=0\)
+</p>
+<p>\(0^0 = 0^{0+0}=0^0*0^0\)
+</p>
+<p>\( \Rightarrow 0^0 = 0^0*0^0  \)   
+</p>
+<p>So \(0^0\) is a solution of \(x=x*x\ \iff x(x-1)=0 \)
+</p>
+<p>So \( 0^0 \in \{0,1\} \)
+</p>
+<p>And that’s it. Our definition of exponentiation restricts the possible values for \(0^0\) to \(0\) and \(1\). There isn’t enough constraints to impose one specific value. 
+</p>
+<p>Unlike the case with \(0^{-1}\), we totally could set \(0^0=1\) by convention without implying any contradictions and this is often done in practice. 
+</p>
+<p> \(<\)sidenote\(>\)
+</p>
+<p>What we just did to define exponentiation can also be done for multiplication.
+</p>
+<p>Multiplication is first introduced as “iterative addition”, so ...
+</p>
+<p>Intuitive definition of exponentiation:
+</p>
+<p>\( \bullet \: a*n = a+a+a+...+a\) (\(n\) times)
+</p>
+<p>From that I reformulate it as:
+</p>
+<p>Inductive definition of multiplication with second input in \( \mathbb{N}^{*}\): 
+</p>
+<p>\( \bullet \: mult: \mathbb{C} \times \mathbb{N}^{*} \rightarrow  \mathbb{C}  \), where \( mult(a,n) = a*n \), is a function so that: 
+</p>
+<p>\( (A)\: a*1 = a \)
+</p>
+<p>\( (B)\: a*(n+1)=a*n+a\)  for \(n \in \mathbb{N}^{*} \)  
+</p>
+<p>And I can show that this is equivalent to :
+</p>
+<p>"Golden” definition of multiplication with second input in \( \mathbb{N}^{*}\): 
+</p>
+<p>\( \bullet \: mult:    \mathbb{C} \times \mathbb{N}^{*} \rightarrow  \mathbb{C}    \), where \( mult(a,n) = a*n \), is a function so that:  
+</p>
+<p>\((A)\: a*1=a \)
+</p>
+<p>\((B)\: a*(m+n)=a*m+a*n \)   for \(m,n \in \mathbb{N}^{*} \)  
+</p>
+<p>So, the classic rule of distributivity (from the left) would be considered the “Golden Rule of Multiplication” according to my terminology. 
+</p>
+<p>\(<\)/sidenote\(>\)
+</p>
+<p>Now I have an important remark to do: There are many definitions for exponentiation, not all of them equivalent. The one I just constructed is the one that is the most directly inferred from our intuitive understanding of exponentiation. But, there is also another quite common definition of this operation, this one using Set Theory:
+</p>
+<p>\( \bullet \: |A|^{|B|} = |\{f:B \rightarrow A\}| \)
+</p>
+<p>Surprisingly, with this definition, \(0^0\) must equal \(1\) and nothing else. (Why?) It is totally well-defined in that case!
+</p>
+<p>So, earlier, when I said \(0^0\) is indeterminate, it really is relative to the definition of exponentiation that we choose. 
+</p>
+<p>Challenge: How would you extend the “Golden” definition of exponentiation for \( n \in \mathbb{Z}\), then    \( n \in \mathbb{Q}\), then    \( n \in \mathbb{R}\) and finally    \( n \in \mathbb{C}\)? You want the properties \((A)\) and \((B)\) to always hold. Would you have to add more properties along the way to make the function well-defined?
+</p>
+</div>
+<footer></footer>
+</body>
+</html>
