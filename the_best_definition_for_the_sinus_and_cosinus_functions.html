@@ -4,55 +4,29 @@
 <head>
   <title>The “best” definition for the sinus and cosinus functions</title>
   <meta charset ="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
   <style>
 
     body
     {
         background-color: #fafafa;
     }
-
-    @media (min-width: 700px) 
-    {
-        .content 
-        {
+    .content {
         background-color: white;
-        font-size: 120%;
+        font-size: 20px;
         margin-right: 15%;
         margin-left: 15%;
-        padding:5%;
+        padding:20px;
         border-radius: 25px;
-        }
-
-        header 
-        {
-          font-size:700%
-        }
-
-    }
-
-    @media (max-width: 700px) 
-    {
-        .content 
-        {
-        background-color: white;
-        font-size: 120%;
-        padding:5%;
-        border-radius: 25px;
-        }
-
-        header 
-        {
-          font-size:400%
-        }
     }
 
     header, footer {
         border-radius: 25px;
         background-image: url(img/banniere.jpg);
+        font-size: 100px;
         text-align: center;
         color: white;
-        padding:10%;
+        padding:100px;
     }
 
     .center {
@@ -67,10 +41,6 @@ a {
 }
 a:hover{
   font-weight: bold;
-}
-
-.article {
-  text-decoration: none;
 }
 </style>
 
@@ -105,7 +75,7 @@ a:hover{
 <p>● 2) A triangle is isosceles if it has 2 angles that are equal in measure
 </p>
 
-<img src="img/tbdftsacf_1.png" width="500"> 
+<img src="img/tbdftsacf_1.png" width="100%"> 
 
 <p>These 2 definitions are “equivalent” in the sense that a triangle would be isosceles according to the first definition if and only if it is isosceles according to the second definition. (If you are into analytical philosophy, specifically Frege, you might say these definitions express different “senses” but have the same “reference”.)
 </p>
@@ -130,7 +100,7 @@ a:hover{
 <p>\(\bullet\)  Let \(\triangle\ ABC\) be a right triangle where \(\angle ABC\) is the right angle
 </p>
 
-<img src="img/tbdftsacf_2.png" width="300">
+<img src="img/tbdftsacf_2.png" width="100%">
 
 <p>Then we define \(sin(\theta)=a/c\) and \(cos(\theta)=b/c  \).
 </p>
@@ -138,16 +108,16 @@ a:hover{
 </p>
 <p>Among the cons, we have that this definition only makes senses for \(\theta \in ]0,\tau/4[\) (let’s immediately work in radians). Also, I don’t think that this way of presenting sin and cos makes it obvious how to visualize the graphs of these functions. (It is possible to see the graphs but it requires us to be kind of clever.)  
 </p>
-<img src="img/tbdftsacf_3.png" width="700">
+<img src="img/tbdftsacf_3.png" width="100%">
 <p>You might also say that this definition doesn’t immediately allows us to evaluate the functions for a given input. But I don’t think this is such a big problem and I will explain it soon later.
 </p>
 <p>In CEGEP, I learned the definition involving power series:
 </p>
 <p>Definition 2 (by the power series):
 </p>
-<p>\(\bullet \: sin(t) = \sum_{n=0}^{\infty} \frac{(-1)^n}{(2n+1)!}t^{2n+1} = t-\frac{t^3}{3!}+\frac{t^5}{5!}-...\)  
+<p>\(\bullet \: sin(t) = \sum_{n=0}^{\infty} \frac{(-1)^n}{(2n+1)!}t^{2n+1} \)\(= t-\frac{t^3}{3!}+\frac{t^5}{5!}-...\)  
 </p>
-<p>\( \bullet \:cos(t) = \sum_{n=0}^{\infty} \frac{(-1)^n}{(2n)!}t^{2n} = 1-\frac{t^2}{2!}+\frac{t^4}{4!}-...\) 
+<p>\( \bullet \:cos(t) = \sum_{n=0}^{\infty} \frac{(-1)^n}{(2n)!}t^{2n} \)\(= 1-\frac{t^2}{2!}+\frac{t^4}{4!}-...\) 
 </p>
 <p>This definition has the main advantage of allowing us to directly calculate the values of the functions. But the inconvenience that immediately comes with these types of definitions is that they make us say: “Where is this coming from? What is its utility?”.
 </p>
@@ -180,7 +150,7 @@ a:hover{
 <p>\( \bullet \: S^1 = \{ (x,y) \in \mathbb{R}^2 | \: ||(x,y)||=1\} \)
 </p>
 
-<img src="img/tbdftsacf_4.png" width="500">
+<img src="img/tbdftsacf_4.png" width="100%">
 
 <p>We see this way of defining a circle works the following way: We take as points \( (x,y) \) on the circle all the solutions to the equation \( x^2+y^2=1 \).
 </p>
@@ -200,9 +170,9 @@ a:hover{
 </p>
 <p>Because I said I wanted \(f\) to output a point on the unit circle, that implies:
 </p>
-<p>\( f(t) \in S^1 \iff ||f(t)||=1 \iff ||(x(t),y(t))||=1\)
+<p>\( f(t) \in S^1 \iff ||f(t)||=1 \)\( \iff ||(x(t),y(t))||=1\)
 </p>
-<p>\(\iff \sqrt{x^2(t)+y^2(t)}=1 \iff   x^2(t)+y^2(t)=1 \)
+<p>\(\iff \sqrt{x^2(t)+y^2(t)}=1 \)\(\iff   x^2(t)+y^2(t)=1 \)
 </p>
 <p>With this, I will state the first property to these functions, which is the first part of their Definition 4:
 </p>
@@ -210,7 +180,7 @@ a:hover{
 </p>
 <p>This property isn’t enough. To illustrate this, let’s remark that the following function \(f^{*} \) does obey the property \( (1) \) but isn’t the “nicest” function we could think of:
 </p>
-<img src="img/tbdftsacf_5.png" width="500">
+<img src="img/tbdftsacf_5.png" width="100%">
 
 <p>Basically, we see that \(f^{*} \) isn’t “continuous”, because it occasionally “jumps”. But, let’s say I want \(f\) to be a function that goes continuously around the circle.
 </p>
@@ -220,7 +190,7 @@ a:hover{
 </p>
 <p>●   Let \( g(t) \) be a curve in space (2d in this case). Then   \( g(t) \)   is parameterized by arc length if the length of the arc between \( g(t_0) \) and \(g(t_1) \) (where \(t_1 > t_0 \) ) is precisely \( t_1 – t_0\).  
 </p>
-<img src="img/tbdftsacf_6.png" width="500">
+<img src="img/tbdftsacf_6.png" width="100%">
 <p>(In the case of the unit circle, how is this idea related to “radians”?).
 </p>
 <p>I won’t go behind all the theory behind it. It is easy to google anyway. For our purposes, I need to know the theorem that says:
@@ -229,7 +199,7 @@ a:hover{
 </p>
 <p>From that I deduce:
 </p>
-<p>\( ||f’(t)||=1 \iff ||(x’(t),y’(t))||=1 \)
+<p>\( ||f’(t)||=1 \)\(\iff ||(x’(t),y’(t))||=1 \)
 </p>
 <p>\(\iff (x’(t))^2+(y’(t))^2=1 \)
 </p>
