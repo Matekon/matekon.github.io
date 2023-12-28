@@ -70,6 +70,9 @@
       .article {
         text-decoration: none;
       }
+      img{
+        width:100%;
+      }
       </style>
        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
        <script id="MathJax-script" async
@@ -105,20 +108,20 @@
 
         Because we have 3 different choices between 2 options, we can create \(2^3=8\) different patterns.<br><br>
         So, for the pattern A, we chose to: 
-        <pre>
-Pattern A:
-1) Start with one note and then add notes
-2) Start with the note at the extreme left and then add notes left of it.
+        <p>
+Pattern A:<br>
+1) Start with one note and then add notes.<br>
+2) Start with the note at the extreme left and then add notes left of it.<br>
 3) Play the seed from left to right. 
-        </pre>
+        </p>
 
         Let's now create all 8 possible patterns.
-        <pre>
-Pattern B:
-1) Start with the whole seed and then substract notes
-2) Substract notes from the right.
+        <p>
+Pattern B:<br>
+1) Start with the whole seed and then substract notes.<br>
+2) Substract notes from the right.<br>
 3) Play the seed from left to right. 
-        </pre>
+        </p>
 
 
         <img src="img/Pattern B.png" width="100%"><br>
@@ -126,69 +129,69 @@ Pattern B:
             <source src="audio/Pattern B.mp3" type="audio/mp3">
         </audio><br><br>
 
-<pre>
-Pattern C:
-1) Start with one note and then add notes
-2) Start with the note at the extreme left and then add notes left of it.
+<p>
+Pattern C:<br>
+1) Start with one note and then add notes.<br>
+2) Start with the note at the extreme left and then add notes left of it.<br>
 3) Play the seed from right to left.
- </pre>
+ </p>
 
         <img src="img/Pattern C.png" width="100%"><br>
         <audio controls>
             <source src="audio/Pattern C.mp3" type="audio/mp3">
         </audio><br><br>
 
-<pre>
-Pattern D:
-1) Start with the whole seed and then substract notes
-2) Substract notes from the left.
+<p>
+Pattern D:<br>
+1) Start with the whole seed and then substract notes.<br>
+2) Substract notes from the left.<br>
 3) Play the seed from right to left.
-</pre>
+</p>
 
         <img src="img/Pattern D.png" width="100%"><br>
         <audio controls>
             <source src="audio/Pattern D.mp3" type="audio/mp3">
         </audio><br><br>
-<pre>
-Pattern E:
-1) Start with one note and then add notes
-2) Start with the note at the extreme right and then add notes left of it.
+<p>
+Pattern E:<br>
+1) Start with one note and then add notes.<br>
+2) Start with the note at the extreme right and then add notes left of it.<br>
 3) Play the seed from left to right.
-</pre>
+</p>
 
         <img src="img/Pattern E.png" width="100%"><br>
         <audio controls>
             <source src="audio/Pattern E.mp3" type="audio/mp3">
         </audio><br><br>
-<pre>
-Pattern F:
-1) Start with the whole seed and then substract notes
-2) Substract notes from the left.
+<p>
+Pattern F:<br>
+1) Start with the whole seed and then substract notes.<br>
+2) Substract notes from the left.<br>
 3) Play the seed from left to right.
-</pre>
+</p>
 
         <img src="img/Pattern F.png" width="100%"><br>
         <audio controls>
             <source src="audio/Pattern F.mp3" type="audio/mp3">
         </audio><br><br>
 
-<pre>
-Pattern G:
-1) Start with one note and then add notes
-2) Start with the note at the extreme right and the add notes left of it.
+<p>
+Pattern G:<br>
+1) Start with one note and then add notes.<br>
+2) Start with the note at the extreme right and the add notes left of it.<br>
 3) Play the seed from right to left.
-</pre>
+</p>
 
         <img src="img/Pattern G.png" width="100%"><br>
         <audio controls>
             <source src="audio/Pattern G.mp3" type="audio/mp3">
         </audio><br><br>
-<pre>
-Pattern H:
-1) Start with the whole seed and then substract notes
-2) Substract notes from the right.
+<p>
+Pattern H:<br>
+1) Start with the whole seed and then substract notes.<br>
+2) Substract notes from the right.<br>
 3) Play the seed from right to left.
-</pre>
+</p>
 
         <img src="img/Pattern H.png" width="100%"><br>
         <audio controls>
@@ -196,7 +199,7 @@ Pattern H:
         </audio><br><br>
 
         We can calculate the number of notes in each pattern with Gauss's formula:
-        \(1+2+3+4+5+6+7= \sum_{i=1}^{7}i=7*8/2=28\)<br><br>
+        \(1+2+3+4+5+6+7\)\(= \sum_{i=1}^{7}i=7*8/2=28\)<br><br>
         We notice that Gauss's formula implies that the sum of numbers from 1 to 7, i.e. 28,
         has to be a multiple of 7. This will come useful later. <br> <br>
 
@@ -212,11 +215,11 @@ Pattern H:
        
         Once the pattern is full, we then substract notes form it, starting from the left. Once there is no notes left, the section is over. <br> <br>
 
-        So each section will have  \(1+2+3+4+...+27+28+27+...+3+2+1 = \sum_{i=1}^{28}i+\sum_{i=1}^{27}i\)
-        \(= 28*29/2+27*28/2= 406+378=784 \) notes. <br><br>
+        So each section will have  \(1+2+3+4+...+27+28+27+\)\(...+3+2+1 =  \)\(\sum_{i=1}^{28}i+\sum_{i=1}^{27}i\)
+        \(= 28*29/2+27*28/2\)\(= 406+378=784 \) notes. <br><br>
 
     We notice that \(784=28^2\). This is a specific case of the general assumption that \(\sum_{i=1}^{n}i+\sum_{i=1}^{n-1}i=n^2\)<br>
-    Indead, \(\sum_{i=1}^{n}i+\sum_{i=1}^{n-1}i=n(n+1)/2+(n-1)n/2= n/2((n+1)+(n-1)) = n/2*2n = n^2\) <br><br>
+    Indead, \(\sum_{i=1}^{n}i+\sum_{i=1}^{n-1}i\)\(=n(n+1)/2+(n-1)n/2\)\(= n/2((n+1)+(n-1)) \\= n/2*2n = n^2\) <br><br>
 
         Because \(784 = 28^2 = 4^2*7^2 = 16*49\), we can divide each section into 49 measures of 16 notes each. Because \(49=7^2\), we can 
         separate these 49 measures into 7 groups of 7 measures. <br> <br>
@@ -331,7 +334,7 @@ Section H: HFGHGHH
 
 That's what I call clever!<br><br>
 
-<iframe width="790" height="600"
+<iframe width="100%" height="100%"
 src="https://www.youtube.com/embed/wczJlxoxITE">
 </iframe>
 
