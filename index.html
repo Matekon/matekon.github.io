@@ -10,13 +10,29 @@
     {
         background-color: #fafafa;
     }
-    .content {
+
+    @media only screen and (min-width: 600px) 
+    {
+        .content 
+        {
         background-color: white;
-        font-size: 20px;
+        font-size: 120%;
         margin-right: 15%;
         margin-left: 15%;
         padding:20px;
         border-radius: 25px;
+        }
+    }
+
+    @media only screen and (max-width: 600px) 
+    {
+        .content 
+        {
+        background-color: white;
+        font-size: 120%;
+        padding:20px;
+        border-radius: 25px;
+        }
     }
 
     header, footer {
@@ -40,6 +56,10 @@ a {
 }
 a:hover{
   font-weight: bold;
+}
+
+.article {
+  text-decoration: none;
 }
 </style>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
@@ -77,11 +97,20 @@ modern, and I want to share with you <i>my take on</i> their musical findings.</
 <p>My youtube channel: <a href="https://www.youtube.com/channel/UCpOp7WuUy5msrMz6VoyOC3w" target="_blank"> 
 youtube.com/channel/UCpOp7WuUy5msrMz6VoyOC3w </a></p>
 
-<p> My blog about math: <a href="https://matekon.tumblr.com/" target="_blank"> matekon.tumblr.com/ </a></p>
- 
-<p> My blog about my personnal reflexions (french): <a href="https://unlogicienquiseforceaetrepoete.blogspot.com" target="_blank"> unlogicienquiseforceaetrepoete.blogspot.com </a></p>
-
 <p> Here are some <a href="my_youtube_playlists.html"> youtube playlists </a>  I made. </p>
+
+<p> My articles and videos about math and music theory:</p>
+<ul>
+  <li><a class="article" href="Coming_Together.html">A mathematical analysis of Frederic Rzewski's Coming Together</a></li>
+  <li><a class="article" href="https://www.youtube.com/watch?v=MaWJsZEPg-c&t=316s"target="_blank">How do we generalize the cross product to other dimensions?</a></li>
+  <li><a class="article" href="https://www.youtube.com/watch?v=XqVWrjylhgA" target="_blank">What is a product, generally speaking?</a></li>
+  <li><a class="article" href="what_does_galois_theory_really_tell_us.html">What does Galois Theory really tell us?</a></li>
+  <li><a class="article" href="what_do_0_to_the_0_and_0_to_the_-1_equal_undefined_vs_indeterminate.html">What do \(0^0\) and \(0^{-1}\) equal? Undefined vs Indeterminate.</a></li>
+  <li><a class="article" href="The_“best”_definition_for_the_sinus_and_cosinus_functions.html">The “best” definition for the sinus and cosinus functions</a></li>
+  <li><a class="article" href="the_shortest_proof_that_there_are_countably_many_algebraic_numbers.html">The shortest proof that there are countably many algebraic numbers</a></li>
+</ul>
+
+<p> My blog about my personnal reflexions (french): <a href="https://unlogicienquiseforceaetrepoete.blogspot.com" target="_blank"> unlogicienquiseforceaetrepoete.blogspot.com </a></p>
  
  <h2>My compositions</h2>
  
