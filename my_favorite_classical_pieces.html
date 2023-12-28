@@ -4,29 +4,55 @@
 <head>
   <title>My favorite classical pieces</title>
   <meta charset ="utf-8">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
 
     body
     {
         background-color: #fafafa;
     }
-    .content {
+
+    @media (min-width: 700px) 
+    {
+        .content 
+        {
         background-color: white;
-        font-size: 20px;
+        font-size: 120%;
         margin-right: 15%;
         margin-left: 15%;
-        padding:20px;
+        padding:5%;
         border-radius: 25px;
+        }
+
+        header 
+        {
+          font-size:700%
+        }
+
+    }
+
+    @media (max-width: 700px) 
+    {
+        .content 
+        {
+        background-color: white;
+        font-size: 120%;
+        padding:5%;
+        border-radius: 25px;
+        }
+
+        header 
+        {
+          font-size:400%
+        }
     }
 
     header, footer {
         border-radius: 25px;
         background-image: url(img/banniere.jpg);
-        font-size: 100px;
         text-align: center;
         color: white;
-        padding:100px;
+        padding:10%;
     }
 
     .center {
@@ -42,6 +68,10 @@ a {
 a:hover{
   font-weight: bold;
 }
+
+.article {
+  text-decoration: none;
+}
 </style>
 </head>
 
@@ -51,7 +81,7 @@ a:hover{
 <div class="content">
 
 
-<h1 style="text-align: center;">My favorite classical music pieces:</h1>
+  <h1 style="text-align: center;">My favorite classical music pieces:</h1>
 
   <p>I’ll try to keep it to one piece per composer...</p>
 
