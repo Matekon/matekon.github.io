@@ -88,7 +88,7 @@
 
         <h1> A mathematical analysis of Frederic Rzewski's <i>Coming Together</i> </h1>
 
-        This is the starting point of the piece, or the "seed". Its consists of 7 notes ascending the G minor pentatonic scale. <br><br>
+        This is the starting point of the piece, or the "seed". It consists of 7 notes ascending the G minor pentatonic scale. <br><br>
         <img src="img/Seed.png"><br>
         <audio controls>
             <source src="audio/Seed.mp3" type="audio/mp3">
@@ -101,26 +101,26 @@
             <source src="audio/Pattern A.mp3" type="audio/mp3">
         </audio><br><br>
 
-        Let's notice the process we've just done could have being done differently. <br><br>
-        Instead of starting with one note and then adding notes, we've could have started with the whole pattern add then substract notes. <br><br>
-        We've could also have started with the last note of the seed as the first note of the pattern, and then add notes left of it.<br><br>
-        Finally, we could have chosen to play the seed from right to left instead of left to right.<br><br>
+        Let's take a moment to consider the different ways we could have developed the seed. <br><br>
+        We could have started with the whole pattern and instead of adding notes, subtract notes.<br><br>
+        We could also have started with the last note of the seed and added notes before.<br><br>
+        Finally, we could have chosen to play the seed backwards instead of forwards.<br><br>
 
         Because we have 3 different choices between 2 options, we can create \(2^3=8\) different patterns.<br><br>
         So, for the pattern A, we chose to: 
         <p>
 Pattern A:<br>
 1) Start with one note and then add notes.<br>
-2) Start with the note at the extreme left and then add notes left of it.<br>
-3) Play the seed from left to right. 
+2) Start with the first note of the seed and then add notes before it.<br>
+3) Play the seed forwards. 
         </p>
 
         Let's now create all 8 possible patterns.
         <p>
 Pattern B:<br>
-1) Start with the whole seed and then substract notes.<br>
-2) Substract notes from the right.<br>
-3) Play the seed from left to right. 
+1) Start with the whole seed and then subtract notes.<br>
+2) Subtract notes from the end of the seed.<br>
+3) Play the seed forwards. 
         </p>
 
 
@@ -132,8 +132,8 @@ Pattern B:<br>
 <p>
 Pattern C:<br>
 1) Start with one note and then add notes.<br>
-2) Start with the note at the extreme left and then add notes left of it.<br>
-3) Play the seed from right to left.
+2) Start with the first note of the seed and then add notes after it.<br>
+3) Play the seed backwards.
  </p>
 
         <img src="img/Pattern C.png" width="100%"><br>
@@ -143,9 +143,9 @@ Pattern C:<br>
 
 <p>
 Pattern D:<br>
-1) Start with the whole seed and then substract notes.<br>
-2) Substract notes from the left.<br>
-3) Play the seed from right to left.
+1) Start with the whole seed and then subtract notes.<br>
+2) Subtract notes from the beginning of the seed.<br>
+3) Play the seed backwards.
 </p>
 
         <img src="img/Pattern D.png" width="100%"><br>
@@ -155,8 +155,8 @@ Pattern D:<br>
 <p>
 Pattern E:<br>
 1) Start with one note and then add notes.<br>
-2) Start with the note at the extreme right and then add notes left of it.<br>
-3) Play the seed from left to right.
+2) Start with the last note of the seed and then add notes before it.<br>
+3) Play the seed forwards.
 </p>
 
         <img src="img/Pattern E.png" width="100%"><br>
@@ -165,9 +165,9 @@ Pattern E:<br>
         </audio><br><br>
 <p>
 Pattern F:<br>
-1) Start with the whole seed and then substract notes.<br>
-2) Substract notes from the left.<br>
-3) Play the seed from left to right.
+1) Start with the whole seed and then subtract notes.<br>
+2) Subtract notes from the the beginning of the seed.<br>
+3) Play the seed forwards.
 </p>
 
         <img src="img/Pattern F.png" width="100%"><br>
@@ -178,8 +178,8 @@ Pattern F:<br>
 <p>
 Pattern G:<br>
 1) Start with one note and then add notes.<br>
-2) Start with the note at the extreme right and the add notes left of it.<br>
-3) Play the seed from right to left.
+2) Start with the last note of the seed and the add notes after it.<br>
+3) Play the seed backwards.
 </p>
 
         <img src="img/Pattern G.png" width="100%"><br>
@@ -188,9 +188,9 @@ Pattern G:<br>
         </audio><br><br>
 <p>
 Pattern H:<br>
-1) Start with the whole seed and then substract notes.<br>
-2) Substract notes from the right.<br>
-3) Play the seed from right to left.
+1) Start with the whole seed and then subtract notes.<br>
+2) Subtract notes from the end of the seed.<br>
+3) Play the seed backwards.
 </p>
 
         <img src="img/Pattern H.png" width="100%"><br>
@@ -213,7 +213,7 @@ Pattern H:<br>
             <source src="audio/Section A.mp3" type="audio/mp3">
         </audio><br><br>
        
-        Once the pattern is full, we then substract notes form it, starting from the left. Once there is no notes left, the section is over. <br> <br>
+        Once the pattern is full, we then subtract notes from it, starting from the left. Once there are no notes left, the section is over. <br> <br>
 
         So each section will have  \(1+2+3+4+...+27+28+27+\)\(...+3+2+1 =  \)\(\sum_{i=1}^{28}i+\sum_{i=1}^{27}i\)
         \(= 28*29/2+27*28/2\)\(= 406+378=784 \) notes. <br><br>
