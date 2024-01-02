@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Alternative approaches to complex numbers</title>
+  <meta charset ="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+
+    body
+    {
+        background-color: #fafafa;
+    }
+
+    @media (min-width: 700px) 
+    {
+        .content 
+        {
+        background-color: white;
+        font-size: 120%;
+        margin-right: 15%;
+        margin-left: 15%;
+        padding:5%;
+        border-radius: 25px;
+        }
+
+        header 
+        {
+          font-size:700%
+        }
+
+    }
+
+    @media (max-width: 700px) 
+    {
+        .content 
+        {
+        background-color: white;
+        font-size: 120%;
+        padding:5%;
+        border-radius: 25px;
+        }
+
+        header 
+        {
+          font-size:400%
+        }
+    }
+
+    header, footer {
+        border-radius: 25px;
+        background-image: url(img/banniere.jpg);
+        text-align: center;
+        color: white;
+        padding:10%;
+    }
+
+    .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 25px;
+}
+
+a {
+  color:black;
+}
+a:hover{
+  font-weight: bold;
+}
+
+.article {
+  text-decoration: none;
+}
+</style>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async
+       src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
+</head>
+
+<header>Matekon</header>
+<div class="content">
+    
+    <h1>Alternative approaches to complex numbers</h1>
+
+<h2> Introduction </h2>
+
+Complex Numbers really aren't mysteries at all. If you think so, it is simply because of poor teaching.<br><br>
+
+I think the confusion simply arises from the fact that we call them "numbers" in the first place. But why have we historically even decided to give them such a name? Let's start from scratch and ask ourselves what a number is.   
+<br><br>
+We are intuitively introduced to the concept of a number as the cardinal of a finite set, which is basically the "number" of elements that a finite set possesses. This description aptly captures the natural numbers, a concept widely accepted as numbers. Personally, I include \(0\) in the natural numbers because it serves as the cardinality of a set, namely the empty set.
+<br><br>
+We observe that "numbers" like \(-1\), \(1/2\), and \(\sqrt{2}\) do not align with the concept of set cardinals. In what manner, then, do we classify them as numbers?
+<br><br>
+Historically, it appears that abstract entities were introduced to address problem-solving with natural numbers in equations. Despite not aligning with the concept of set cardinals for finite sets, we chose to persist in referring to these entities as numbers.<br><br>
+
+As the equation \(x + 1 = 0\) lacked solutions within the realm of natural numbers, we introduced -1 as its defined solution. This exemplifies the potency of mathematical thinking, wherein abstract entities are crafted to address equations, without a strict requirement for them to represent tangible concepts. While negative numbers can be associated with ideas like debt, it's important to note that such representation comes after the mathematical definition and isn't essential to their existence.
+ <br><br>
+ In general, negative numbers were introduced to address equations in the form \(x+n=0\), where \(n\) is a natural number. 
+<br><br>
+Similarly, to find a solution for the equation \(2x=1\), we introduced \(1/2\). More broadly, the concept of fractions was established to address equations in the form \(ax=b\), where \(a\) and \(b\) are integers and \(a \ne 0\).<br><br>
+The definition of real numbers deviates from this trend. They were conceived to address a different problem, specifically providing limits to Cauchy sequences of rational numbers.<br><br>
+
+During my younger years, I struggled more with understanding negative numbers as a concept compared to positive real numbers. The clarity of positive real numbers, representing tangible concepts like length, area, and volume, made them more accessible to me. Despite their lack of alignment with set cardinals, this interpretation allowed me to perceive positive real numbers as very tangible objects.<br><br>
+Given the total ordering and density of real numbers, we can effectively "map" them onto a single line known as the "real number line." While this concept is intuitively understandable, it significantly deviates from the traditional idea of a number as the cardinality of a finite set.<br><br>
+The real number line enables us to utilize real numbers, including negatives, as coordinates in a coordinate system.
+<br><br>
+Similarly, to address the equation \(x^2=-1\), we introduced \(i\).
+<br><br>
+One reason why complex numbers might be perplexing to some is that they lack a straightforward representation in terms of length, area, or volume, as is possible with positive real numbers. Envisioning a length of \(i\) meters, for example, can seem perplexing.<br><br>
+Additionally, the lack of a clear method to compare \(i\) with any real number using the standard ordering makes it challenging to find a visible place for complex numbers on the real number line. Unlike negative numbers, they don't naturally fit as coordinates in a coordinate system when the axes are represented as lines.<br><br>
+Instead, the understanding of complex numbers is best approached as 2D vectors. Similar to the real number line, complex numbers are mapped onto the complex plane.<br><br>
+Complex numbers exhibit the characteristic of being a closed field. This implies that polynomial equations with complex numbers as coefficients will invariably have complex numbers as their solutions.<br><br>
+While there are extensions beyond complex numbers, the primary motivation behind formulating them doesn't revolve around merely "solving equations".<br><br>
+<br><br>
+
+<h2>Complex numbers as 2D vectors with a product</h2>
+
+Let's be honest, solving equations is  the main interest of complex numbers. We invented them for this reason historically.
+<br><br>
+But they have other interests, <a href="https://youtu.be/QJYmyhnaaek?t=176" target="_blank">this video of 3blue1brown </a> uses them for a completely different purpose.
+In addressing a problem, Grant opts to reinterpret 2D vectors as complex numbers. Upon making this reinterpretation, he promptly employs the operation of multiplication.
+<br><br>
+Fundamentally, multiplication is the key factor that sets complex numbers apart from ordinary 2D vectors.
+<br><br>
+Consider the operations applicable to regular 2D vectors. The two fundamental operations are vector addition and multiplication by a scalar (a real number). 
+<br><br>
+We notice the absence of a conventional product that takes two 2D vectors and yields another 2D vector.
+<br><br>
+The scalar product, yielding a real number, doesn't fulfill the requirement for the kind of product we are seeking. In <a href="https://www.youtube.com/watch?v=MaWJsZEPg-c" target="_blank">my video about the vector product</a>, I mentioned that the 2D equivalent of the vector product would be a unary operation. Once again, it doesn't align with what we are seeking.
+<br><br>
+In <a href="https://www.youtube.com/watch?v=XqVWrjylhgA" target="_blank">my video about the general notion of product</a>, I defined two products on 2D vectors:
+<br><br>
+Direct product:<br>
+\(*: \mathbb{R}^2 \times \mathbb{R}^2 \rightarrow \mathbb{R}^2\)<br>
+\(\begin{pmatrix}a\\b\end{pmatrix}*\begin{pmatrix}c\\d\end{pmatrix}= \begin{pmatrix}ac\\bd\end{pmatrix}\)
+<br><br>
+Clever product:<br>
+\(*: \mathbb{R}^2 \times \mathbb{R}^2 \rightarrow \mathbb{R}^2\)<br>
+\(\begin{pmatrix}a\\b\end{pmatrix}\bigodot\begin{pmatrix}c\\d\end{pmatrix}= \begin{pmatrix}a & b\\b & a\end{pmatrix}\begin{pmatrix}c\\d\end{pmatrix}\)
+<br><br>
+Even tough these are totally valid as products, they don't meet our criteria. Ideally, we aim to define a product \(\otimes\) that is associative, commutative, possesses an identity element, and enables every nonzero element to have an inverse.
+<br><br>
+
+The direct product would have 
+\(\begin{pmatrix}1\\1\end{pmatrix}\) as its identity element, but nonzero elements such as \(\begin{pmatrix}1\\0\end{pmatrix}\) wouldn't have an inverse. For the clever product, \(\begin{pmatrix}1\\0\end{pmatrix}\) would be its identity element but \(\begin{pmatrix}1\\1\end{pmatrix}\) wouldn't have an inverse.
+\(\begin{pmatrix}1\\1\end{pmatrix}\bigodot\begin{pmatrix}x\\y\end{pmatrix}=\begin{pmatrix}1\\0\end{pmatrix} \iff \begin{pmatrix}1 & 1 \\1 & 1 \end{pmatrix}\begin{pmatrix}x\\y\end{pmatrix}=\begin{pmatrix}1\\0\end{pmatrix} \iff \begin{pmatrix}x+y \\x+y \end{pmatrix}=\begin{pmatrix}1\\0\end{pmatrix} \) (no solutions)
+<br><br>
+But the product of 2D vectors inferred from \(i^2=-1\) would meet all these criteria—being associative, commutative, having an identity element, and allowing every nonzero element to have an inverse.<br><br>
+\((a+ib)(c+id)=ab+(bc+ad)i+bdi^2= (ab-bd)+(bc+ad)i\)
+<br><br>
+If we write this with vectors, we get:<br><br>
+
+\(\begin{pmatrix}a\\b\end{pmatrix} \otimes \begin{pmatrix}c\\d\end{pmatrix} = \begin{pmatrix}ab-bd\\bc+ad\end{pmatrix}=\begin{pmatrix}a & -b \\b & a \end{pmatrix}\begin{pmatrix}c\\d\end{pmatrix}\)
+<br><br>
+So this product of 2D vectors is kind of a more clever variant of the clever product. To simplify terminology and avoid confusion, we can aptly refer to this product as the complex product.
+<br><br>
+This product, which adheres to all the mentioned criteria, is noteworthy. However, it's important to acknowledge that it isn't the sole product with these properties.
+\(\begin{pmatrix}a\\b\end{pmatrix} \otimes_k \begin{pmatrix}c\\d\end{pmatrix} =\begin{pmatrix}a & -kb \\b & a \end{pmatrix}\begin{pmatrix}c\\d\end{pmatrix}\) would also work, with \(k>0\). But we can verify that \((\mathbb{R}^2,+, \otimes_k)\) would be isomorphic to \((\mathbb{R}^2,+, \otimes)\).
+
+<h2>Complex numbers as linear transformations</h2>
+
+Here is another way to interpret complex numbers. 
+<br><br>
+When we perform an operation between two vectors, we can interpret the first vector as acting on the second one. Multiplication, in this context, can be visualized as applying a linear transformation to the second vector, with the components of the first vector serving as parameters for this transformation.
+<br><br>
+Linear transformations on 2D vectors can be expressed using 2 by 2 matrices, involving 4 parameters. The distinctiveness of the complex product lies in its nature as a linear transformation, albeit with a reduced set of 2 parameters.
+<br><br>
+Let's consider the structure \( (\mathbb{R}^{2\times 2},+,*)\). It represents all linear transformations on 2D vectors that yield 2D vectors. Each element within this structure is defined by 4 parameters.
+<br><br>
+Let's find a substructure of this structure where its elements are defined by just 2 parameters.
+<br><br>
+Let's consider two substructures where the elements are characterized by just one parameter each.
+<br><br>
+First, we have the homotheties : \(\Big(\Big\{ \begin{pmatrix} r & 0 \\  0 & r\end{pmatrix} \Big|\, r \in \mathbb{R}_+ \Big\},+,*\Big)\).
+<br><br>
+Second, we have the rotations : \(\Big(\Big\{ \begin{pmatrix} \cos(\theta) & -\sin(\theta) \\ \sin(\theta)& \cos(\theta) \end{pmatrix} \Big| \,\theta \in [0,\tau[ \Big\},\,+,*\Big)\).<br><br>
+It's noteworthy that the set mentioned above is equivalent to the set of 2 by 2 matrices, where each matrix has two columns forming an orthonormal basis of \(\mathbb{R}^2\).
+<br><br>
+By performing multiplications between elements from both sets, we can generate the structure: <br> <br>\(\Big(\Big\{ \begin{pmatrix} r\cos(\theta) & -r\sin(\theta) \\ r\sin(\theta)& r\cos(\theta) \end{pmatrix} \Big| \, r \in \mathbb{R}_+ \land \theta \in [0,\tau[ \Big\},+,*\Big)\)
+<br><br>The set mentioned above comprises the set of linear transformations achieved by combining a homothety with a rotation. We can rewrite it as \(\Big(\Big\{ \begin{pmatrix} a & - b \\ b & a \end{pmatrix} \Big| \, a,b \in \mathbb{R} \Big\},+,*\Big)\). It's evident that this set aligns with the set of 2 by 2 matrices, where each matrix has two columns forming an orthogonal basis of \(\mathbb{R}^2\).
+<br><br>
+This field isomorphic to the complex numbers allows us to interpret complex numbers as matrices in the form 
+\(\begin{pmatrix} a & - b \\ b & a \end{pmatrix}\), which we can conveniently write as 
+\(\begin{pmatrix} a \\ b \end{pmatrix}\) to reduce redundancy.  
+<br><br>
+\(\begin{pmatrix} a \\ b \end{pmatrix} \otimes \begin{pmatrix} c \\ d \end{pmatrix}=\begin{pmatrix} ac-bd\\ ad+bc\end{pmatrix}\)<br><br>
+\(\begin{pmatrix} a & - b \\ b & a \end{pmatrix}\begin{pmatrix} c & -d \\ d & c \end{pmatrix} = \begin{pmatrix} ac-bd & -(ad+bc)\\ ad+bc & ac-bd \end{pmatrix}\)
+<br><br>So, \((\mathbb{R}^2,+, \otimes)\) is isomorphic to \(\Big(\Big\{ \begin{pmatrix} a & - b \\ b & a \end{pmatrix} \Big| \, a,b \in \mathbb{R} \Big\},+,*\Big)\).
+<br><br>
+Complex numbers can be viewed as linear transformations, conveniently "represented" as a single 2D vector. In this representation, the norm of the vector corresponds to the scaling factor of the homothety, while the angle of the vector signifies the angle of the rotation. 
+
+
+</div>
+<footer></footer>
+</body>
+</html>
