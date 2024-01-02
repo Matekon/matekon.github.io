@@ -148,14 +148,14 @@ Even tough these are totally valid as products, they don't meet our criteria. Id
 
 The direct product would have 
 \(\begin{pmatrix}1\\1\end{pmatrix}\) as its identity element, but nonzero elements such as \(\begin{pmatrix}1\\0\end{pmatrix}\) wouldn't have an inverse. For the clever product, \(\begin{pmatrix}1\\0\end{pmatrix}\) would be its identity element but \(\begin{pmatrix}1\\1\end{pmatrix}\) wouldn't have an inverse.
-\(\begin{pmatrix}1\\1\end{pmatrix}\bigodot\begin{pmatrix}x\\y\end{pmatrix}=\begin{pmatrix}1\\0\end{pmatrix} \iff \begin{pmatrix}1 & 1 \\1 & 1 \end{pmatrix}\begin{pmatrix}x\\y\end{pmatrix}=\begin{pmatrix}1\\0\end{pmatrix} \iff \begin{pmatrix}x+y \\x+y \end{pmatrix}=\begin{pmatrix}1\\0\end{pmatrix} \) (no solutions)
+\(\begin{pmatrix}1\\1\end{pmatrix}\bigodot\begin{pmatrix}x\\y\end{pmatrix}=\begin{pmatrix}1\\0\end{pmatrix}\) \( \iff \begin{pmatrix}1 & 1 \\1 & 1 \end{pmatrix}\begin{pmatrix}x\\y\end{pmatrix}=\begin{pmatrix}1\\0\end{pmatrix}\)\(\iff \begin{pmatrix}x+y \\x+y \end{pmatrix}=\begin{pmatrix}1\\0\end{pmatrix} \) (no solutions)
 <br><br>
 But the product of 2D vectors inferred from \(i^2=-1\) would meet all these criteria—being associative, commutative, having an identity element, and allowing every nonzero element to have an inverse.<br><br>
-\((a+ib)(c+id)=ab+(bc+ad)i+bdi^2= (ab-bd)+(bc+ad)i\)
+\((a+ib)(c+id)\)\(=ab+(bc+ad)i+bdi^2\)\(= (ab-bd)+(bc+ad)i\)
 <br><br>
 If we write this with vectors, we get:<br><br>
 
-\(\begin{pmatrix}a\\b\end{pmatrix} \otimes \begin{pmatrix}c\\d\end{pmatrix} = \begin{pmatrix}ab-bd\\bc+ad\end{pmatrix}=\begin{pmatrix}a & -b \\b & a \end{pmatrix}\begin{pmatrix}c\\d\end{pmatrix}\)
+\(\begin{pmatrix}a\\b\end{pmatrix} \otimes \begin{pmatrix}c\\d\end{pmatrix}\)\(= \begin{pmatrix}ab-bd\\bc+ad\end{pmatrix}\)\(=\begin{pmatrix}a & -b \\b & a \end{pmatrix}\begin{pmatrix}c\\d\end{pmatrix}\)
 <br><br>
 So this product of 2D vectors is kind of a more clever variant of the clever product. To simplify terminology and avoid confusion, we can aptly refer to this product as the complex product.
 <br><br>
@@ -178,10 +178,10 @@ Let's consider two substructures where the elements are characterized by just on
 <br><br>
 First, we have the homotheties : \(\Big(\Big\{ \begin{pmatrix} r & 0 \\  0 & r\end{pmatrix} \Big|\, r \in \mathbb{R}_+ \Big\},+,*\Big)\).
 <br><br>
-Second, we have the rotations : \(\Big(\Big\{ \begin{pmatrix} \cos(\theta) & -\sin(\theta) \\ \sin(\theta)& \cos(\theta) \end{pmatrix} \Big| \,\theta \in [0,\tau[ \Big\},\,+,*\Big)\).<br><br>
+Second, we have the rotations : \(\Big(\Big\{ \begin{pmatrix} \cos(\theta) & -\sin(\theta) \\ \sin(\theta)& \cos(\theta) \end{pmatrix} \)\(\Big| \,\theta \in [0,\tau[ \Big\},\,+,*\Big)\).<br><br>
 It's noteworthy that the set mentioned above is equivalent to the set of 2 by 2 matrices, where each matrix has two columns forming an orthonormal basis of \(\mathbb{R}^2\).
 <br><br>
-By performing multiplications between elements from both sets, we can generate the structure: <br> <br>\(\Big(\Big\{ \begin{pmatrix} r\cos(\theta) & -r\sin(\theta) \\ r\sin(\theta)& r\cos(\theta) \end{pmatrix} \Big| \, r \in \mathbb{R}_+ \land \theta \in [0,\tau[ \Big\},+,*\Big)\)
+By performing multiplications between elements from both sets, we can generate the structure: <br> <br>\(\Big(\Big\{ \begin{pmatrix} r\cos(\theta) & -r\sin(\theta) \\ r\sin(\theta)& r\cos(\theta) \end{pmatrix}\)\( \Big| \, r \in \mathbb{R}_+ \land \theta \in [0,\tau[ \Big\},+,*\Big)\)
 <br><br>The set mentioned above comprises the set of linear transformations achieved by combining a homothety with a rotation. We can rewrite it as \(\Big(\Big\{ \begin{pmatrix} a & - b \\ b & a \end{pmatrix} \Big| \, a,b \in \mathbb{R} \Big\},+,*\Big)\). It's evident that this set aligns with the set of 2 by 2 matrices, where each matrix has two columns forming an orthogonal basis of \(\mathbb{R}^2\).
 <br><br>
 This field isomorphic to the complex numbers allows us to interpret complex numbers as matrices in the form 
@@ -189,7 +189,7 @@ This field isomorphic to the complex numbers allows us to interpret complex numb
 \(\begin{pmatrix} a \\ b \end{pmatrix}\) to reduce redundancy.  
 <br><br>
 \(\begin{pmatrix} a \\ b \end{pmatrix} \otimes \begin{pmatrix} c \\ d \end{pmatrix}=\begin{pmatrix} ac-bd\\ ad+bc\end{pmatrix}\)<br><br>
-\(\begin{pmatrix} a & - b \\ b & a \end{pmatrix}\begin{pmatrix} c & -d \\ d & c \end{pmatrix} = \begin{pmatrix} ac-bd & -(ad+bc)\\ ad+bc & ac-bd \end{pmatrix}\)
+\(\begin{pmatrix} a & - b \\ b & a \end{pmatrix}\begin{pmatrix} c & -d \\ d & c \end{pmatrix}\)\(= \begin{pmatrix} ac-bd & -(ad+bc)\\ ad+bc & ac-bd \end{pmatrix}\)
 <br><br>So, \((\mathbb{R}^2,+, \otimes)\) is isomorphic to \(\Big(\Big\{ \begin{pmatrix} a & - b \\ b & a \end{pmatrix} \Big| \, a,b \in \mathbb{R} \Big\},+,*\Big)\).
 <br><br>
 Complex numbers can be viewed as linear transformations, conveniently "represented" as a single 2D vector. In this representation, the norm of the vector corresponds to the scaling factor of the homothety, while the angle of the vector signifies the angle of the rotation. 
